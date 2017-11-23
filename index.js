@@ -31,16 +31,25 @@ function successPosition(position) {
 	//lets get some stuff out of the position object
 	var time = position.timestamp;
 	var latitude = position.coords.latitude;
-	
+	var longitude = position.coords.longitude;
+    
+    //work out the actual time. Time above is the unix time
+    var unixtime = new Date(position.timestamp);
+    var date = unixtime.toDateString();
+    
+    //Other properities related to where the user is
+    var time = unixtime.toTimeString();
+    
 	//OK. Now we want to update the display with the correct values
-	$('#time').val("Recieved data at " + time);
-	$('#lattext').val("I should contain the latitude data...");
-	
+	$('#date').val("Recieved:" + date);
+    $('#time').val(time);
+	$('#lattext').val(latitude);
+	$('#longtext').val(longitude);
 }
 
 //called if the position is not obtained correctly
 function failPosition(error) {
 	//change time box to show updated message
+	$('#date').val("Error getting data: " + error);
 	$('#time').val("Error getting data: " + error);
-	
 }

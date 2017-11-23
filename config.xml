@@ -27,4 +27,6 @@
         </array>
     </config-file>
     
+    <plugin name="cordova-plugin-geolocation " version="1" />
+    
 </widget>
