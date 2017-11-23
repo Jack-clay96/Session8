@@ -16,7 +16,7 @@
     <plugin name="cordova-plugin-geolocation-android-activator" />
     
     <!--Plugin to support gathering of location data--> 
-    <plugin name="cordova-plugin-geolocation"  />
+    <plugin name="cordova-plugin-geolocation" />
 
     
     <!--Apple iOS 10 or newer: Adding a parameter to the ios build to allow suer to give permission to access location-->
@@ -26,7 +26,5 @@
             <string>Give me your location! Let me have it!!!</string>
         </array>
     </config-file>
-    
-    <plugin name="cordova-plugin-geolocation " version="1" />
     
 </widget>
