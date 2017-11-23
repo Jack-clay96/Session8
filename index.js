@@ -2,11 +2,15 @@
 $(document).on('pageinit', function() {
 	
 	//set up listener for button click
-	$(document).on('click', getPosition);
+	$('#getLocationButton').on('click', getPosition);
 	
 	//change time box to show message
 	$('#time').val("Press the button to get location data");
 	
+    //listener for button on / off
+    $('#on').on('click', sucess);
+    $('#off').on('click', fail);
+    
 });
 
 
@@ -45,6 +49,27 @@ function successPosition(position) {
     $('#time').val(time);
 	$('#lattext').val(latitude);
 	$('#longtext').val(longitude);
+}
+
+//Session 2 - fucntions for Compass
+function on()
+{
+    
+}
+
+function off ()
+{
+    
+}
+
+function success(position)
+{
+
+}
+
+function fail(error)
+{
+    navigator.geolocation.clearWatch(watchID);
 }
 
 //called if the position is not obtained correctly
